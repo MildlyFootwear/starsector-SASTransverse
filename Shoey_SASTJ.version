@@ -1,7 +1,7 @@
 {
-  "masterVersionFile": "https://raw.githubusercontent.com/MildlyFootwear/starsector-SustainedBurn/refs/heads/master/Shoey_BSB.version",
+  "masterVersionFile": "https://raw.githubusercontent.com/MildlyFootwear/starsector-SASTransverse/refs/heads/master/Shoey_SASTJ.version",
 
-  "modName": "SAS - Transverse Jump",
+  "modName": "Shoey's Assorted Stuff - Transverse Jump",
   "modVersion":
     {
       "major": 1,
