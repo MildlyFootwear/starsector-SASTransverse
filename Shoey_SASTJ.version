@@ -1,0 +1,12 @@
+{
+  "masterVersionFile": "https://raw.githubusercontent.com/MildlyFootwear/starsector-SustainedBurn/refs/heads/master/Shoey_BSB.version",
+
+  "modName": "SAS - Transverse Jump",
+  "modVersion":
+    {
+      "major": 1,
+      "minor": 0,
+      "patch": 0
+    },
+  "modThreadId": "",
+}
