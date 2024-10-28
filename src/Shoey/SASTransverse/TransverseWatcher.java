@@ -90,7 +90,7 @@ public class TransverseWatcher implements EveryFrameScript {
             });
         } else {
             Global.getSector().getCampaignUI().addMessage("Jumping to " + t.getName() + ".");
-            return false;
+            return true;
         }
     }
 
