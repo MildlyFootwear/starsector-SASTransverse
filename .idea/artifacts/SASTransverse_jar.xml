@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SASTransverse:jar">
+    <output-path>$PROJECT_DIR$/jars/</output-path>
+    <root id="archive" name="SASTransverse.jar">
+      <element id="module-output" name="SASTransverse" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.0/kotlin-stdlib-jdk8-1.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.6.0/kotlin-stdlib-1.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-common/1.6.0/kotlin-stdlib-common-1.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.0/kotlin-stdlib-jdk7-1.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/commons-compiler.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/commons-compiler-jdk.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/fs.common_obf.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/fs.sound_obf.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/janino.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/jinput.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/jogg-0.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/jorbis-0.0.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/json.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/log4j-1.2.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/lwjgl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/lwjgl_util.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/starfarer.api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/starfarer_obf.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../starsector-core/xstream-1.4.10.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

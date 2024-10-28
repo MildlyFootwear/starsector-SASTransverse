@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SASTransverse.iml" filepath="$PROJECT_DIR$/.idea/SASTransverse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SASTransverse.iml" filepath="$PROJECT_DIR$/SASTransverse.iml" />
     </modules>
   </component>
 </project>

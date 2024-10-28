@@ -5,5 +5,7 @@
 	"utility":"true",
 	"version": { "major":"1", "minor": "0", "patch": "0" },
 	"description":"Changes Transverse Jump so abilities like Sustained Burn won't be disabled by it.",
-	"gameVersion": "0.97a-RC11"
+	"gameVersion": "0.97a-RC11",
+	"jars":["jars/SASTransverse.jar"],
+	"modPlugin":"Shoey.SASTransverse.MainPlugin"
 }
