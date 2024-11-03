@@ -57,13 +57,13 @@ public class TransverseWatcher implements EveryFrameScript {
         tt = t;
         int wantTranspond = 0;
         int dontTranspond = 0;
-        for (PlanetAPI planetAPI : t.getStarSystem().getPlanets())
+        for (SectorEntityToken e: t.getStarSystem().getAllEntities())
         {
 
-            if (planetAPI.getFaction() == null)
+            if (e.getFaction() == null || e.getMarket() == null)
                 continue;
 
-            FactionAPI factionAPI = planetAPI.getFaction();
+            FactionAPI factionAPI = e.getFaction();
 
             if (factionAPI.isNeutralFaction() || factionAPI.isPlayerFaction())
                 continue;
@@ -81,17 +81,14 @@ public class TransverseWatcher implements EveryFrameScript {
             return Global.getSector().getCampaignUI().showConfirmDialog(t.getStarSystem().getBaseName() + " has mostly non-hostile factions. Turn on transponder?", "Yes", "No", new Script() {
                 @Override
                 public void run() {
-                    Global.getSector().getCampaignUI().addMessage("Jumping to " + tt.getName() + ".");
                     ponder = true;
                 }
             }, new Script() {
                 @Override
                 public void run() {
-                    Global.getSector().getCampaignUI().addMessage("Jumping to " + tt.getName() + ".");
                 }
             });
         } else {
-            Global.getSector().getCampaignUI().addMessage("Jumping to " + t.getName() + ".");
             return true;
         }
     }

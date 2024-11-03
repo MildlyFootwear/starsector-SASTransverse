@@ -23,5 +23,6 @@ public class MainPlugin extends BaseModPlugin {
             }
         }
         Global.getSector().addTransientListener(new TransverseListener());
+        Global.getSector().addTransientScript(new TransverseFrameChecker());
     }
 }
