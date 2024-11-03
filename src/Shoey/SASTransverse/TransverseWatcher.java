@@ -44,7 +44,9 @@ public class TransverseWatcher implements EveryFrameScript {
         if (ponder)
         {
             if (!pFleet.isTransponderOn()) {
-                (pFleet.getAbility("transponder")).pressButton();
+                pFleet.getAbility("transponder").pressButton();
+            } else {
+                ponder = false;
             }
         }
     }

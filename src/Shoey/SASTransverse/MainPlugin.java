@@ -2,6 +2,7 @@ package Shoey.SASTransverse;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignEventListener;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import org.apache.log4j.Logger;
 
@@ -13,6 +14,14 @@ public class MainPlugin extends BaseModPlugin {
     @Override
     public void onGameLoad(boolean newGame) {
         super.onGameLoad(newGame);
-        Global.getSector().addListener(new TransverseListener());
+        for (CampaignEventListener l : Global.getSector().getAllListeners())
+        {
+            if (l.getClass() == TransverseListener.class)
+            {
+                Global.getSector().removeListener(l);
+                logger.info("Removed unneeded listener "+l);
+            }
+        }
+        Global.getSector().addTransientListener(new TransverseListener());
     }
 }
