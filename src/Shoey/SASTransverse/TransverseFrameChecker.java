@@ -33,7 +33,7 @@ public class TransverseFrameChecker implements EveryFrameScript {
                 messageTime += amount;
                 burnTime = 0;
                 CampaignUIAPI cUI = Global.getSector().getCampaignUI();
-                if (!oncePerStop && messageTime > 1 && !cUI.isShowingDialog() && !cUI.isShowingMenu())
+                if (!oncePerStop && messageTime > 0.5 && !cUI.isShowingDialog() && !cUI.isShowingMenu())
                 {
                     messageTime = 0;
                     oncePerStop = true;
