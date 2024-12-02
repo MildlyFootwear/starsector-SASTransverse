@@ -4,7 +4,6 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.Script;
 import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility;
 
@@ -16,7 +15,6 @@ public class TransverseWatcher implements EveryFrameScript {
     boolean done = false;
     boolean show = true;
     public boolean ponder = false;
-    public SectorEntityToken tt;
 
     @Override
     public boolean isDone() {
@@ -43,18 +41,14 @@ public class TransverseWatcher implements EveryFrameScript {
         }
         if (ponder)
         {
-            if (!pFleet.isTransponderOn()) {
-                pFleet.getAbility("transponder").pressButton();
-            } else {
-                ponder = false;
-            }
+            ponder = false;
+            Global.getSector().addTransientScript(new EFSTransponder());
         }
     }
 
 
-    boolean transverseCheck(SectorEntityToken t)
+    public boolean transverseCheck(SectorEntityToken t)
     {
-        tt = t;
         int wantTranspond = 0;
         int dontTranspond = 0;
         for (SectorEntityToken e: t.getStarSystem().getAllEntities())
@@ -78,7 +72,7 @@ public class TransverseWatcher implements EveryFrameScript {
 
         if (wantTranspond > dontTranspond && !pFleet.getAbility("transponder").isActive())
         {
-            return Global.getSector().getCampaignUI().showConfirmDialog(t.getStarSystem().getBaseName() + " has mostly non-hostile factions. Turn on transponder?", "Yes", "No", new Script() {
+            return Global.getSector().getCampaignUI().showConfirmDialog("Destination has mostly non-hostile factions. Turn on transponder?", "Yes", "No", new Script() {
                 @Override
                 public void run() {
                     ponder = true;

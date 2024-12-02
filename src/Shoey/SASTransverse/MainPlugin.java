@@ -22,6 +22,7 @@ public class MainPlugin extends BaseModPlugin {
                 logger.info("Removed unneeded listener "+l);
             }
         }
+        Global.getSector().getListenerManager().addListener(new GateHandler(), true);
         Global.getSector().addTransientListener(new TransverseListener());
         Global.getSector().addTransientScript(new TransverseFrameChecker());
     }
