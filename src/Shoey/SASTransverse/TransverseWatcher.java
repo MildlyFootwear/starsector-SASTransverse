@@ -62,7 +62,7 @@ public class TransverseWatcher implements EveryFrameScript {
             if (factionAPI.isNeutralFaction() || factionAPI.isPlayerFaction())
                 continue;
 
-            if (factionAPI.getRelToPlayer().getRel() > -0.25f)
+            if (factionAPI.getRelToPlayer().isHostile())
             {
                 wantTranspond++;
             } else {
