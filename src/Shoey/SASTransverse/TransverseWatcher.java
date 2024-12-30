@@ -14,7 +14,6 @@ public class TransverseWatcher implements EveryFrameScript {
 
     boolean done = false;
     boolean show = true;
-    public boolean ponder = false;
 
     @Override
     public boolean isDone() {
@@ -39,15 +38,10 @@ public class TransverseWatcher implements EveryFrameScript {
                 show = !transverseCheck(pT.getNearestWell(FractureJumpAbility.NASCENT_JUMP_DIST).getTarget());
             }
         }
-        if (ponder)
-        {
-            ponder = false;
-            Global.getSector().addTransientScript(new EFSTransponder());
-        }
     }
 
 
-    public boolean transverseCheck(SectorEntityToken t)
+    public static boolean transverseCheck(SectorEntityToken t)
     {
         int wantTranspond = 0;
         int dontTranspond = 0;
@@ -62,7 +56,7 @@ public class TransverseWatcher implements EveryFrameScript {
             if (factionAPI.isNeutralFaction() || factionAPI.isPlayerFaction())
                 continue;
 
-            if (factionAPI.getRelToPlayer().isHostile())
+            if (!factionAPI.getRelToPlayer().isHostile())
             {
                 wantTranspond++;
             } else {
@@ -75,7 +69,7 @@ public class TransverseWatcher implements EveryFrameScript {
             return Global.getSector().getCampaignUI().showConfirmDialog("Destination has mostly non-hostile factions. Turn on transponder?", "Yes", "No", new Script() {
                 @Override
                 public void run() {
-                    ponder = true;
+                    Global.getSector().addTransientScript(new EFSTransponder());
                 }
             }, new Script() {
                 @Override
